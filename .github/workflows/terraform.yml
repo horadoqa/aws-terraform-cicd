@@ -35,8 +35,8 @@ jobs:
       - name: Inicializar o Terraform
         run: terraform init
 
-      # - name: Validar configuração do Terraform
-      #   run: terraform validate
+      - name: Validar configuração do Terraform
+        run: terraform validate
 
       # - name: Aplicar o Terraform
       #   run: terraform apply -auto-approve -var-file=terraform/env/${{ github.event_name }}.tfvars
