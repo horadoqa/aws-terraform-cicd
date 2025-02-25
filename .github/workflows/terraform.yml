@@ -11,7 +11,7 @@ on:
 jobs:
   terraform:
     name: Aplicar Terraform
-    runs-on: ubuntu-latest-amd64
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do repositório
