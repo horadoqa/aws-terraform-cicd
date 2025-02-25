@@ -39,7 +39,7 @@ jobs:
         run: terraform validate
 
       - name: Aplicar o Terraform
-        run: terraform apply -auto-approve -var-file=infra/env/${{ github.event_name }}.tfvars
+        run: terraform apply -auto-approve -var-file=infra/env/dev.tfvars
 
       - name: Exibir o output do Terraform
         run: terraform output
