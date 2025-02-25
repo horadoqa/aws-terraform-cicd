@@ -27,10 +27,11 @@ jobs:
       - name: Instalar o Terraform
         run: |
           sudo apt-get update && sudo apt-get install -y wget unzip
-          wget https://releases.hashicorp.com/terraform/1.10.5/terraform_1.10.5_linux_arm64.zip -P /tmp
-          unzip -o /tmp/terraform_1.10.5_linux_arm64.zip -d /tmp
-          cd /tmp/terraform_1.10.5_linux_arm64
-          sudo mv terraform /usr/local/bin/
+          wget https://releases.hashicorp.com/terraform/1.10.5/terraform_1.10.5_linux_arm64.zip -P /tmp  # Baixar para /tmp
+          unzip -o /tmp/terraform_1.10.5_linux_arm64.zip -d /tmp  # Descompactar no diretório temporário
+          # O arquivo 'terraform' será extraído diretamente em /tmp
+          sudo mv /tmp/terraform /usr/local/bin/  # Mover o binário para /usr/local/bin/
+
 
 
       # - name: Inicializar o Terraform
