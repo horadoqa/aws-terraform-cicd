@@ -45,8 +45,5 @@ jobs:
       - name: Aplicar o Terraform
         run: |
           cd infra
-          # terraform apply -var-file=env/dev.tfvars -auto-approve
-          terraform destroy -var-file=env/dev.tfvars -auto-approve
-
-      - name: Exibir o output do Terraform
-        run: terraform -chdir=infra output
+          terraform apply -var-file=env/dev.tfvars -auto-approve
+          # terraform destroy -var-file=env/dev.tfvars -auto-approve
