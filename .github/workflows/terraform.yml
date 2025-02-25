@@ -30,11 +30,11 @@ jobs:
           wget https://releases.hashicorp.com/terraform/1.10.5/terraform_1.10.5_linux_arm64.zip
           unzip -o terraform_1.10.5_linux_arm64.zip
           cd terraform_1.10.5_linux_arm64
-          # Verificar e remover qualquer diretório/arquivo chamado terraform em /usr/local/bin
-          if [ -e /usr/local/bin/terraform ]; then
-            sudo rm -rf /usr/local/bin/terraform  # Remove o diretório ou arquivo existente
-          fi
-          sudo mv terraform /usr/local/bin/
+          # # Verificar e remover qualquer diretório/arquivo chamado terraform em /usr/local/bin
+          # if [ -e /usr/local/bin/terraform ]; then
+          #   sudo rm -rf /usr/local/bin/terraform  # Remove o diretório ou arquivo existente
+          # fi
+          # sudo mv terraform /usr/local/bin/
 
       # - name: Inicializar o Terraform
       #   run: terraform init
