@@ -14,4 +14,4 @@ sudo apt-get update  -y
 sudo apt-get install k6
 
 # Baixaar os scripts de testes
-cd ~ && git clone https://github.com/horadoqa/scripts-k6
+sudo git clone https://github.com/horadoqa/scripts-k6
