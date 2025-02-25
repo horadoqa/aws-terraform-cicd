@@ -26,21 +26,22 @@ jobs:
 
       - name: Instalar o Terraform
         run: |
-          sudo apt-get update && sudo apt-get install -y wget unzip
-          wget https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip
-          unzip -o terraform_1.5.0_linux_amd64.zip
+          ls -la /usr/local/bin/terraform
+          # sudo apt-get update && sudo apt-get install -y wget unzip
+          # wget https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip
+          # unzip -o terraform_1.5.0_linux_amd64.zip
           # Remove qualquer diretório ou arquivo 'terraform' existente
-          sudo rm -f /usr/local/bin/terraform
-          sudo mv terraform /usr/local/bin/
+          # sudo rm -f /usr/local/bin/terraform
+          # sudo mv terraform /usr/local/bin/
 
-      - name: Inicializar o Terraform
-        run: terraform init
+      # - name: Inicializar o Terraform
+      #   run: terraform init
 
-      - name: Validar configuração do Terraform
-        run: terraform validate
+      # - name: Validar configuração do Terraform
+      #   run: terraform validate
 
-      - name: Aplicar o Terraform
-        run: terraform apply -auto-approve -var-file=terraform/env/${{ github.event_name }}.tfvars
+      # - name: Aplicar o Terraform
+      #   run: terraform apply -auto-approve -var-file=terraform/env/${{ github.event_name }}.tfvars
 
-      - name: Exibir o output do Terraform
-        run: terraform output
+      # - name: Exibir o output do Terraform
+      #   run: terraform output
