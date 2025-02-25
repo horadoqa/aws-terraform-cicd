@@ -32,10 +32,8 @@ jobs:
           # O arquivo 'terraform' será extraído diretamente em /tmp
           sudo mv /tmp/terraform /usr/local/bin/  # Mover o binário para /usr/local/bin/
 
-
-
-      # - name: Inicializar o Terraform
-      #   run: terraform init
+      - name: Inicializar o Terraform
+        run: terraform init
 
       # - name: Validar configuração do Terraform
       #   run: terraform validate
