@@ -33,13 +33,19 @@ jobs:
           sudo mv /tmp/terraform /usr/local/bin/  # Mover o binário para /usr/local/bin/
 
       - name: Inicializar o Terraform
-        run: terraform -chdir=infra init
+        run: |
+          cd infra
+          terraform init
 
       - name: Validar configuração do Terraform
-        run: terraform -chdir=infra validate
+        run: |
+          cd infra
+          terraform validate
 
       - name: Aplicar o Terraform
-        run: terraform -chdir=infra apply -var-file=infra/env/dev.tfvars -auto-approve
+        run: |
+          cd infra
+          terraform apply -var-file=env/dev.tfvars -auto-approve
 
       - name: Exibir o output do Terraform
         run: terraform -chdir=infra output
