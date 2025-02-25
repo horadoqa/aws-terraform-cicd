@@ -45,4 +45,4 @@ jobs:
       - name: Aplicar o Terraform
         run: |
           cd infra
-          terraform apply -var-file=env/dev.tfvars -var "environment=dev" -auto-approve
+          terraform apply -var-file=env/dev.tfvars -auto-approve
