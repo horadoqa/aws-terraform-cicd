@@ -1,4 +1,4 @@
-resource "aws_instance" "website" {
+resource "aws_instance" "k6" {
   count         = var.number_instances
   ami           = var.aws_ami
   instance_type = var.instance_type
@@ -6,6 +6,6 @@ resource "aws_instance" "website" {
   security_groups = [aws_security_group.allow_ssh_http.name]
 
   tags = {
-    Name = "Website"
+    Name = "k6"
   }
 }
